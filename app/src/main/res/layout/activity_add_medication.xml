@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".AddMedication">
+
+    <TextView
+        android:id="@+id/addMedicationHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppins"
+        android:text="Add Medication."
+        android:textColor="@color/blue"
+        android:textSize="24sp" />
+
+    <ImageView
+        android:id="@+id/saveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_done_24"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/addMedicationHeading"
+        android:layout_marginEnd="6dp" />
+
+    <EditText
+        android:id="@+id/titleEditText"
+        android:layout_width="406dp"
+        android:layout_height="66dp"
+        android:layout_below="@+id/addMedicationHeading"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="23dp"
+        android:background="@drawable/blue_border"
+        android:hint="Enter Medication Name: "
+        android:maxLines="1"
+        android:padding="12dp"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/titleEditText1"
+        android:layout_width="434dp"
+        android:layout_height="66dp"
+        android:layout_below="@+id/addMedicationHeading"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="93dp"
+        android:layout_marginEnd="23dp"
+        android:background="@drawable/blue_border"
+        android:hint="Frequency:"
+        android:maxLines="1"
+        android:padding="12dp"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/titleEditText2"
+        android:layout_width="400dp"
+        android:layout_height="66dp"
+        android:layout_below="@+id/addMedicationHeading"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="23dp"
+        android:layout_marginEnd="23dp"
+        android:layout_marginTop="176dp"
+        android:background="@drawable/blue_border"
+        android:hint="Dosage:"
+        android:maxLines="1"
+        android:padding="12dp"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/titleEditText3"
+        android:layout_width="400dp"
+        android:layout_height="66dp"
+        android:layout_below="@+id/addMedicationHeading"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="23dp"
+        android:layout_marginEnd="23dp"
+        android:layout_marginTop="253dp"
+        android:background="@drawable/blue_border"
+        android:hint="Start date:"
+        android:maxLines="1"
+        android:padding="12dp"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/contentEditText"
+        android:layout_width="400dp"
+        android:layout_height="360dp"
+        android:layout_below="@id/titleEditText3"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="23dp"
+        android:background="@drawable/blue_border"
+        android:fontFamily="@font/poppins"
+        android:gravity="top"
+        android:hint="Additional note:"
+        android:maxLines="1"
+        android:padding="12dp"
+        android:textSize="18sp" />
+
+
+
+
+</RelativeLayout>
