@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">CRUD_app</string>
+    <string name="LogoBackground">LogoBackground</string>
+    <string name="Logo">LogoImage</string>
 </resources>
