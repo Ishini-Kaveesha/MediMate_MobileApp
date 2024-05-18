@@ -37,6 +37,9 @@
         android:id="@+id/mediRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="50dp"
+        android:layout_above="@id/addButton"
+        android:layout_marginTop="16dp"
+        android:layout_below="@id/medicationHeading"
         android:padding="16dp" />
+
 </RelativeLayout>

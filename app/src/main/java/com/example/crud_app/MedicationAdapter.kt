@@ -1,5 +1,6 @@
 package com.example.crud_app
 
+import android.app.AlertDialog
 import android.content.Context
 import android.content.Intent
 import android.view.LayoutInflater
@@ -54,12 +55,30 @@ class MedicationAdapter (private var medication: List<Medication>, context: Cont
             holder.itemView.context.startActivity(intent)
         }
 
-        holder.deleteButton.setOnClickListener{
-            db.deleteMedication(medi.id)
-            refreshData(db.getAllMedications())
-            Toast.makeText(holder.itemView.context, "Medication Deleted", Toast.LENGTH_SHORT).show()
-
+        holder.deleteButton.setOnClickListener {
+            showDeleteConfirmationDialog(medi.id, holder.itemView.context)
         }
+    }
+
+    private fun showDeleteConfirmationDialog(medicationId: Int, context: Context) {
+        val alertDialogBuilder = AlertDialog.Builder(context)
+        alertDialogBuilder.setTitle("Confirm Deletion")
+        alertDialogBuilder.setMessage("Are you sure you want to delete this medication?")
+
+        alertDialogBuilder.setPositiveButton("Yes") { _, _ ->
+            // User clicked Yes, proceed with deletion
+            db.deleteMedication(medicationId)
+            refreshData(db.getAllMedications())
+            Toast.makeText(context, "Medication Deleted", Toast.LENGTH_SHORT).show()
+        }
+
+        alertDialogBuilder.setNegativeButton("No") { dialog, _ ->
+            // User clicked No, do nothing
+            dialog.dismiss()
+        }
+
+        val alertDialog = alertDialogBuilder.create()
+        alertDialog.show()
     }
 
     fun refreshData(newMedications: List<Medication>){
